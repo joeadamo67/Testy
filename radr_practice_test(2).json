@@ -1,0 +1,222 @@
+[
+  {
+    "question": "What is the primary structural difference between a focused grid and a parallel grid?",
+    "options": [
+      "Focused grids have thicker lead strips",
+      "Focused grids have lead strips angled toward a focal point; parallel grids have straight strips",
+      "Focused grids always have higher ratios",
+      "Parallel grids contain aluminum; focused grids contain plastic"
+    ],
+    "correct": 1,
+    "explanation": "In a focused grid, the lead strips are progressively angled (canted) toward a specific focal point at a defined distance. Parallel grids have lead strips that run perfectly parallel to each other, allowing use at any distance but requiring perpendicular central ray alignment."
+  },
+  {
+    "question": "An aperture diaphragm is best described as:",
+    "options": [
+      "A flat piece of lead with a hole of fixed size placed below the x-ray tube",
+      "A telescoping cone with adjustable length",
+      "A device with four adjustable shutters",
+      "A rotating disc with various sized openings"
+    ],
+    "correct": 0,
+    "explanation": "An aperture diaphragm is the simplest beam restrictor, consisting of a flat piece of lead with a hole (circular or rectangular) of fixed size. It mounts directly below the tube port and provides basic beam restriction but lacks adjustability and size versatility."
+  },
+  {
+    "question": "What advantage does a cylinder have over a cone for beam restriction?",
+    "options": [
+      "Cylinders allow for adjustable field sizes",
+      "Cylinders produce less internal scatter radiation",
+      "Cylinders are less expensive to manufacture",
+      "Cylinders can be used with any kVp setting"
+    ],
+    "correct": 1,
+    "explanation": "Cylinders have straight parallel walls, while cones have angled walls. The angled walls of cones can produce internal scatter (photons bouncing off the cone walls), which can reach the patient and image receptor. Cylinders eliminate this problem with their straight design."
+  },
+  {
+    "question": "A PBL (Positive Beam Limitation) collimator automatically:",
+    "options": [
+      "Adjusts collimation to match the image receptor size",
+      "Increases kVp when collimation is tightened",
+      "Moves the grid during exposure",
+      "Filters low-energy photons"
+    ],
+    "correct": 0,
+    "explanation": "PBL collimators have sensors that detect the size and orientation of the image receptor in the bucky tray and automatically adjust the collimator shutters to match, preventing unnecessarily large field sizes and reducing patient dose. This feature was federally mandated but is now optional."
+  },
+  {
+    "question": "What is the grid ratio of a grid with lead strips that are 3.2 mm high and interspaces of 0.4 mm?",
+    "options": [
+      "4:1",
+      "6:1",
+      "8:1",
+      "12:1"
+    ],
+    "correct": 2,
+    "explanation": "Grid ratio = height of lead strips ÷ width of interspace. 3.2 mm ÷ 0.4 mm = 8. Therefore, this is an 8:1 grid ratio. Grid ratio is the primary indicator of a grid's ability to clean up scatter radiation."
+  },
+  {
+    "question": "A cross-hatch grid differs from a linear grid in that it:",
+    "options": [
+      "Has lead strips running in two perpendicular directions",
+      "Can be used with tube angulation",
+      "Requires less mAs compensation",
+      "Has a lower grid ratio"
+    ],
+    "correct": 0,
+    "explanation": "Cross-hatch (crossed) grids have lead strips running in both directions (perpendicular to each other), providing superior scatter cleanup. However, they cannot accommodate any tube angulation, require higher exposure factors, and are more expensive than linear grids."
+  },
+  {
+    "question": "The Potter-Bucky diaphragm mechanism is designed to:",
+    "options": [
+      "Adjust beam collimation automatically",
+      "Move the grid during exposure to blur grid lines",
+      "Filter the x-ray beam",
+      "Measure patient thickness"
+    ],
+    "correct": 1,
+    "explanation": "The Potter-Bucky diaphragm is a reciprocating or oscillating grid mechanism that moves the grid laterally during the exposure. This motion blurs the grid lines so they don't appear on the image, while maintaining the grid's scatter cleanup function."
+  },
+  {
+    "question": "A stationary grid is most likely to be used in which clinical situation?",
+    "options": [
+      "Routine chest radiography in the radiology department",
+      "Portable/mobile radiography procedures",
+      "High-speed imaging with short exposure times",
+      "Pediatric imaging"
+    ],
+    "correct": 1,
+    "explanation": "Stationary grids are commonly used for portable/mobile radiography because they don't require the Potter-Bucky mechanism found in fixed tables and upright buckys. The grid lines will be visible on the image unless a very high frequency grid is used."
+  },
+  {
+    "question": "Which grid frequency would show the LEAST visible grid lines on a radiographic image?",
+    "options": [
+      "60 lines/cm",
+      "80 lines/cm",
+      "103 lines/cm",
+      "All frequencies are equally visible"
+    ],
+    "correct": 2,
+    "explanation": "103 lines/cm represents the highest frequency (most lines per unit distance), meaning the lead strips are thinner and closer together. Higher frequency grids produce finer, less visible grid lines on the image, though they may allow slightly more scatter transmission than lower frequency grids of the same ratio."
+  },
+  {
+    "question": "What is the purpose of the grid cap or grid encasement?",
+    "options": [
+      "To increase grid ratio",
+      "To protect the grid from damage and provide a smooth surface",
+      "To improve scatter cleanup",
+      "To reduce patient dose"
+    ],
+    "correct": 1,
+    "explanation": "The grid cap (or cover) is a thin radiolucent material (aluminum or plastic) that encases the grid to protect the delicate lead strips from damage and moisture while providing a smooth, cleanable surface. It adds minimal additional filtration."
+  },
+  {
+    "question": "A linear focused grid allows tube angulation:",
+    "options": [
+      "In any direction up to 15 degrees",
+      "Only perpendicular to the grid lines",
+      "Only parallel to the grid lines",
+      "In no direction; perpendicular alignment required"
+    ],
+    "correct": 1,
+    "explanation": "Linear focused grids allow tube angulation perpendicular to the lead strips because angling this direction doesn't change the photon path relative to the angled strips. Angulation parallel to the strips causes the beam to strike them at incorrect angles, producing cutoff."
+  },
+  {
+    "question": "Which beam restrictor provides continuously variable rectangular field sizes?",
+    "options": [
+      "Aperture diaphragm",
+      "Cone",
+      "Cylinder",
+      "Collimator"
+    ],
+    "correct": 3,
+    "explanation": "The collimator has two sets of adjustable lead shutters that can be independently adjusted to create any rectangular field size from very small to the maximum size. This versatility makes it the standard beam restrictor on modern x-ray equipment."
+  },
+  {
+    "question": "An 8:1 grid has a lead content of 40 grams per square centimeter, while a 12:1 grid has 60 grams per square centimeter. This difference affects:",
+    "options": [
+      "The grid's scatter cleanup ability and mAs requirements",
+      "Only the physical weight of the grid",
+      "Only the cost of the grid",
+      "The focal range of the grid"
+    ],
+    "correct": 0,
+    "explanation": "Higher lead content (higher grid ratio) provides better scatter cleanup but absorbs more primary radiation, requiring increased mAs. The 12:1 grid will remove more scatter than the 8:1 grid but needs approximately 25% more exposure to maintain image receptor exposure."
+  },
+  {
+    "question": "What happens when you use a focused grid with the tube angled parallel to the grid lines?",
+    "options": [
+      "Optimal image quality",
+      "Uniform grid cutoff across entire image",
+      "Grid cutoff predominantly on one side of the image",
+      "Increased scatter reaching the image receptor"
+    ],
+    "correct": 2,
+    "explanation": "Angling the tube parallel to the grid lines causes the x-ray beam to strike the angled lead strips incorrectly on one side of the field. This creates unilateral grid cutoff with decreased exposure on the side opposite the tube angle direction."
+  },
+  {
+    "question": "In a standard variable collimator, how many pairs of shutters are typically present?",
+    "options": [
+      "One pair",
+      "Two pairs",
+      "Three pairs",
+      "Four pairs"
+    ],
+    "correct": 1,
+    "explanation": "Standard collimators have two pairs of adjustable lead shutters positioned at different levels. The upper shutters are closer to the x-ray source and absorb off-focus radiation; the lower shutters define the final field size and are linked to the light field indicator."
+  },
+  {
+    "question": "A grid with a ratio of 16:1 would be most appropriate for which examination?",
+    "options": [
+      "Pediatric extremity",
+      "Adult extremity",
+      "High kVp chest radiography",
+      "Mobile radiography"
+    ],
+    "correct": 2,
+    "explanation": "Very high ratio grids (15:1 or 16:1) are used when high kVp is employed (such as chest radiography at 120 kVp), which produces significant scatter. These grids provide excellent scatter cleanup but require substantially higher exposure factors and precise positioning."
+  },
+  {
+    "question": "The focal range of a typical focused grid might be listed as 40-44 inches. What does this indicate?",
+    "options": [
+      "The grid can only be used at exactly 42 inches",
+      "The optimal distance range where grid cutoff is minimized",
+      "The range of patient thicknesses the grid can handle",
+      "The length of the grid in inches"
+    ],
+    "correct": 1,
+    "explanation": "The focal range indicates the SID range where the divergence of the x-ray beam matches the angle of the grid strips, minimizing grid cutoff. Using the grid within this range ensures that primary radiation can pass through the grid effectively while scatter is absorbed."
+  },
+  {
+    "question": "Compared to a cone, what is a disadvantage of using a cylinder for beam restriction?",
+    "options": [
+      "Cylinders produce more internal scatter",
+      "Cylinders only provide fixed circular field sizes",
+      "Cylinders are heavier and more difficult to mount",
+      "Cylinders require higher kVp settings"
+    ],
+    "correct": 1,
+    "explanation": "While cylinders produce less scatter than cones, they only provide fixed circular field sizes determined by the cylinder diameter. This lack of adjustability is a significant disadvantage compared to variable collimators, limiting their clinical usefulness to specific procedures."
+  },
+  {
+    "question": "An oscillating grid differs from a reciprocating grid in that it:",
+    "options": [
+      "Moves in a circular pattern rather than linear",
+      "Moves continuously rather than back-and-forth",
+      "Has a higher grid ratio",
+      "Requires no electrical power"
+    ],
+    "correct": 0,
+    "explanation": "An oscillating grid moves in a circular or elliptical pattern during exposure, while a reciprocating grid moves back and forth in a linear direction. Both types blur the grid lines to make them invisible, but oscillating grids may provide slightly better blurring of the grid pattern."
+  },
+  {
+    "question": "When using a focused grid, which error would result in the MOST severe grid cutoff?",
+    "options": [
+      "Using the grid 2 inches outside its focal range",
+      "Off-centering by 1 inch",
+      "Placing the grid upside-down",
+      "Angling perpendicular to grid lines by 5 degrees"
+    ],
+    "correct": 2,
+    "explanation": "An upside-down focused grid causes the most severe cutoff because the lead strips angle away from the source rather than toward it. This creates extreme lateral cutoff across the entire image, with the peripheral areas receiving virtually no exposure. The image shows characteristic darkening only in the center."
+  }
+]

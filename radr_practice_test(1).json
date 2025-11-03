@@ -1,0 +1,222 @@
+[
+  {
+    "question": "Which x-ray interaction is most likely to occur at LOW kVp levels (below 70 kVp)?",
+    "options": [
+      "Compton scatter",
+      "Photoelectric effect",
+      "Pair production",
+      "Photodisintegration"
+    ],
+    "correct": 1,
+    "explanation": "The photoelectric effect predominates at lower kVp levels because the photon energy is closer to the binding energy of inner shell electrons. As kVp increases, Compton scatter becomes more prevalent. This is why lower kVp produces higher contrast images."
+  },
+  {
+    "question": "What happens to image contrast when beam restriction (collimation) is increased?",
+    "options": [
+      "Contrast decreases due to less primary radiation",
+      "Contrast increases due to reduced scatter production",
+      "Contrast remains unchanged",
+      "Contrast decreases due to grid cutoff"
+    ],
+    "correct": 1,
+    "explanation": "Tighter collimation reduces the volume of tissue irradiated, which decreases scatter radiation production. Less scatter reaching the image receptor results in improved image contrast. Additionally, patient dose is reduced."
+  },
+  {
+    "question": "In Rayleigh scatter, what characteristic of the x-ray photon changes?",
+    "options": [
+      "Only its direction",
+      "Only its wavelength",
+      "Both direction and energy",
+      "It is completely absorbed"
+    ],
+    "correct": 0,
+    "explanation": "Rayleigh scatter is a coherent, unmodifying interaction where the x-ray photon interacts with the entire atom and changes direction without losing energy. The photon's wavelength remains unchanged, and no ionization occurs."
+  },
+  {
+    "question": "A technique of 80 kVp at 40 inches SID is used. If the SID is decreased to 30 inches, what happens to the exposure rate at the image receptor?",
+    "options": [
+      "Increases by approximately 1.8 times",
+      "Decreases by approximately 1.8 times",
+      "Increases by approximately 2.8 times",
+      "Remains the same"
+    ],
+    "correct": 0,
+    "explanation": "Using the inverse square law: (40²/30²) = 1600/900 = 1.78 (approximately 1.8). When distance decreases, intensity increases. The exposure rate increases by the ratio of the squares of the distances."
+  },
+  {
+    "question": "Grid selectivity refers to:",
+    "options": [
+      "The grid's ability to transmit primary radiation while absorbing scatter",
+      "The number of grid lines per inch",
+      "The ratio of grid height to interspace width",
+      "The distance range a focused grid can be used"
+    ],
+    "correct": 0,
+    "explanation": "Grid selectivity (Σ - Sigma) is the ratio of primary radiation transmitted to scatter radiation transmitted. A grid with high selectivity efficiently removes scatter while allowing most primary radiation to reach the IR, improving image quality."
+  },
+  {
+    "question": "Converting from an 8:1 grid to a 5:1 grid requires what adjustment to maintain image receptor exposure?",
+    "options": [
+      "Increase mAs",
+      "Decrease mAs",
+      "Increase kVp only",
+      "No adjustment needed"
+    ],
+    "correct": 1,
+    "explanation": "An 8:1 grid has a higher conversion factor (approximately 4) than a 5:1 grid (approximately 3). When moving to a lower ratio grid, less mAs is needed because the lower ratio grid absorbs less primary radiation. The mAs should be decreased proportionally."
+  },
+  {
+    "question": "Which beam restrictor provides the MOST effective scatter reduction?",
+    "options": [
+      "Aperture diaphragm",
+      "Cone",
+      "Variable rectangular collimator",
+      "All provide equal scatter reduction"
+    ],
+    "correct": 2,
+    "explanation": "The variable rectangular collimator provides the most effective and versatile scatter reduction because it can be adjusted to tightly conform to any rectangular field size. It restricts the beam closest to the patient and can be precisely adjusted for each examination."
+  },
+  {
+    "question": "What is the primary composition of the interspace material in a grid?",
+    "options": [
+      "Lead",
+      "Aluminum or plastic fiber",
+      "Copper",
+      "Tungsten"
+    ],
+    "correct": 1,
+    "explanation": "Grid interspaces are filled with radiolucent material, typically aluminum or plastic fiber, that allows primary radiation to pass through while the lead strips absorb scatter. The interspace material must be radiolucent to avoid attenuating primary radiation."
+  },
+  {
+    "question": "A focused grid has a focal range of 36-44 inches. If used at 72 inches SID, what will occur?",
+    "options": [
+      "Optimal image quality",
+      "Grid cutoff at the periphery",
+      "Increased scatter reaching the IR",
+      "Decreased patient dose"
+    ],
+    "correct": 1,
+    "explanation": "Using a focused grid outside its focal range causes the primary beam to be absorbed by the grid strips, especially at the edges. This is called focus-grid distance decentering and results in grid cutoff with decreased exposure at the image periphery."
+  },
+  {
+    "question": "Using the 15% rule, if the original technique is 80 kVp at 50 mAs, what new mAs maintains exposure if kVp is increased to 92 kVp?",
+    "options": [
+      "50 mAs",
+      "100 mAs",
+      "25 mAs",
+      "12.5 mAs"
+    ],
+    "correct": 2,
+    "explanation": "92 kVp is a 15% increase from 80 kVp (80 × 1.15 = 92). A 15% increase in kVp doubles the exposure, so mAs must be cut in half to maintain the same IR exposure: 50 ÷ 2 = 25 mAs."
+  },
+  {
+    "question": "Which patient factor creates the LOWEST subject contrast in a radiographic image?",
+    "options": [
+      "Thick patient with lots of fat",
+      "Thin patient with low body fat",
+      "Patient with ascites (fluid in abdomen)",
+      "Pediatric patient"
+    ],
+    "correct": 0,
+    "explanation": "Thick patients with significant fat content create low subject contrast because the increased tissue thickness increases scatter production, and fat has similar attenuation characteristics to other soft tissues. This results in less differential absorption and lower contrast."
+  },
+  {
+    "question": "Secondary radiation is defined as:",
+    "options": [
+      "Only scatter radiation produced by Compton interactions",
+      "Any radiation produced as a result of interactions with matter",
+      "Radiation from the anode only",
+      "Radiation produced by the filament"
+    ],
+    "correct": 1,
+    "explanation": "Secondary radiation includes all radiation produced when the primary beam interacts with matter, including scatter radiation (Compton), characteristic radiation (photoelectric), and other interaction products. It represents newly created radiation, not the original primary beam."
+  },
+  {
+    "question": "Grid frequency refers to:",
+    "options": [
+      "The number of times per second the grid oscillates",
+      "The number of lead strips per inch or centimeter",
+      "The grid ratio",
+      "The thickness of the lead strips"
+    ],
+    "correct": 1,
+    "explanation": "Grid frequency is the number of grid lines (lead strips) per inch or per centimeter. Higher frequency grids (more lines/inch) have thinner lead strips and are less visible on the image, but may allow more scatter transmission than lower frequency grids of the same ratio."
+  },
+  {
+    "question": "What is the contrast improvement factor (K)?",
+    "options": [
+      "The ratio of scatter to primary radiation",
+      "The ratio of contrast with a grid to contrast without a grid",
+      "The amount of mAs increase needed when adding a grid",
+      "The grid conversion factor"
+    ],
+    "correct": 1,
+    "explanation": "The contrast improvement factor (K or Bucky factor) is the ratio of radiographic contrast obtained with a grid to the contrast without a grid. It quantifies how much the grid improves image contrast by removing scatter radiation."
+  },
+  {
+    "question": "In which situation would a cylinder be preferred over a cone for beam restriction?",
+    "options": [
+      "When maximum scatter reduction is needed",
+      "When field size needs to be variable",
+      "When performing skull radiography requiring sharp field definition",
+      "Cylinders offer no advantages over cones"
+    ],
+    "correct": 0,
+    "explanation": "Cylinders (straight-walled tubes) reduce more scatter than cones because cones can produce internal scatter from their angled walls. However, cylinders provide only fixed circular fields, limiting their versatility compared to adjustable collimators."
+  },
+  {
+    "question": "Emphysema is classified as what type of pathology, and how should technique be adjusted?",
+    "options": [
+      "Additive; increase exposure factors",
+      "Destructive; decrease exposure factors",
+      "Additive; decrease exposure factors",
+      "Destructive; increase exposure factors"
+    ],
+    "correct": 1,
+    "explanation": "Emphysema is a destructive pathology characterized by hyperinflation and destruction of lung tissue, resulting in increased air content and decreased tissue density. This requires a decrease in exposure factors to avoid overexposure."
+  },
+  {
+    "question": "Off-center grid error occurs when:",
+    "options": [
+      "The central ray is not aligned with the center of a focused grid",
+      "The grid is upside down",
+      "The SID is outside the focal range",
+      "The grid ratio is incorrect"
+    ],
+    "correct": 0,
+    "explanation": "Off-center error occurs when the central ray is not directed to the center of a focused grid, causing the x-ray photons to strike the grid strips at incorrect angles. This results in grid cutoff, typically affecting one side of the image more than the other."
+  },
+  {
+    "question": "Window width in digital imaging controls:",
+    "options": [
+      "The brightness of the image",
+      "The range of gray shades displayed (contrast)",
+      "The spatial resolution",
+      "The amount of noise in the image"
+    ],
+    "correct": 1,
+    "explanation": "Window width determines the range of pixel values displayed as different gray shades, directly affecting image contrast. A narrow window width displays fewer gray levels (higher contrast), while a wide window displays more gray levels (lower contrast)."
+  },
+  {
+    "question": "Which factor would have the LEAST effect on recorded detail/spatial resolution?",
+    "options": [
+      "Changing focal spot from 0.6 mm to 1.2 mm",
+      "Changing OID from 0 inches to 6 inches",
+      "Changing mAs from 5 to 10",
+      "Changing SID from 40 to 72 inches"
+    ],
+    "correct": 2,
+    "explanation": "mAs affects only the quantity of radiation and image receptor exposure, not spatial resolution. Focal spot size, OID, and SID all affect geometric factors that directly impact recorded detail through magnification and geometric unsharpness (penumbra)."
+  },
+  {
+    "question": "A linear parallel (non-focused) grid can be used with:",
+    "options": [
+      "Any SID without grid cutoff concerns",
+      "Only at its specified focal distance",
+      "Only with perpendicular central ray alignment",
+      "Both A and C are correct"
+    ],
+    "correct": 3,
+    "explanation": "Linear parallel grids have lead strips that run parallel to each other rather than angled toward a focal point. They can be used at any SID without focus-grid distance errors, but the central ray must be perpendicular to avoid cutoff. They also allow limited tube angulation perpendicular to the grid lines."
+  }
+]

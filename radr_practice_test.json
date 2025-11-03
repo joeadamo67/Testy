@@ -1,0 +1,222 @@
+[
+  {
+    "question": "Which type of x-ray interaction contributes NO radiation dose to the patient and produces NO useful image information?",
+    "options": [
+      "Compton scatter",
+      "Photoelectric interaction",
+      "Coherent (Classical) scatter",
+      "Pair production"
+    ],
+    "correct": 2,
+    "explanation": "Coherent scatter (including Classical/Thomson and Rayleigh) is an unmodifying interaction where the x-ray photon changes direction but no energy is absorbed by the patient, contributing neither to dose nor to image formation."
+  },
+  {
+    "question": "In the photoelectric interaction, what happens to the incident x-ray photon?",
+    "options": [
+      "It is scattered at a different angle with reduced energy",
+      "It is completely absorbed by the atom",
+      "It passes through unchanged",
+      "It splits into two photons of equal energy"
+    ],
+    "correct": 1,
+    "explanation": "In photoelectric interaction, the incident photon is completely absorbed by an inner shell electron. The photon transfers all its energy to eject the electron from the atom, contributing to patient dose and producing high image contrast."
+  },
+  {
+    "question": "Which interaction is the primary source of scatter radiation that reaches the image receptor and degrades image quality?",
+    "options": [
+      "Photoelectric effect",
+      "Coherent scatter",
+      "Compton scatter",
+      "Classical scatter"
+    ],
+    "correct": 2,
+    "explanation": "Compton scatter is the primary source of scatter radiation in diagnostic radiography. The incident photon interacts with an outer shell electron, producing a scattered photon with reduced energy that can reach the IR and reduce image contrast."
+  },
+  {
+    "question": "What is the relationship between patient thickness and scatter radiation production?",
+    "options": [
+      "Thinner patients produce more scatter",
+      "Thicker patients produce more scatter",
+      "Patient thickness has no effect on scatter",
+      "Scatter only depends on kVp, not thickness"
+    ],
+    "correct": 1,
+    "explanation": "Thicker patients produce more scatter radiation because there is more tissue volume for x-ray interactions to occur. This increased scatter requires techniques like grids or tighter collimation to maintain image quality."
+  },
+  {
+    "question": "If a technique uses 20 mAs with no grid, what mAs is needed when switching to a 12:1 grid ratio to maintain the same image receptor exposure?",
+    "options": [
+      "40 mAs",
+      "60 mAs",
+      "80 mAs",
+      "100 mAs"
+    ],
+    "correct": 3,
+    "explanation": "A 12:1 grid requires a conversion factor of approximately 5. Therefore, 20 mAs × 5 = 100 mAs. Grid conversion factors increase exposure requirements because the grid absorbs both scatter and some primary radiation."
+  },
+  {
+    "question": "What is the primary purpose of beam collimation?",
+    "options": [
+      "To increase patient dose",
+      "To reduce scatter radiation production",
+      "To increase radiographic density",
+      "To magnify the image"
+    ],
+    "correct": 1,
+    "explanation": "Collimation restricts the x-ray beam to the area of interest, reducing the volume of tissue irradiated. This decreases scatter radiation production, improving image contrast while also reducing patient dose."
+  },
+  {
+    "question": "A focused grid is placed upside-down in the bucky tray. What will be the result?",
+    "options": [
+      "Increased image contrast",
+      "Grid cutoff at the periphery of the image",
+      "No effect on the image",
+      "Increased scatter reaching the IR"
+    ],
+    "correct": 1,
+    "explanation": "When a focused grid is inverted, the grid lines angle away from the primary beam direction, causing severe grid cutoff, especially at the edges. This results in decreased exposure at the periphery and a characteristic appearance on the image."
+  },
+  {
+    "question": "Which technical factor has the GREATEST effect on the production of scatter radiation?",
+    "options": [
+      "mAs",
+      "kVp",
+      "SID",
+      "Focal spot size"
+    ],
+    "correct": 1,
+    "explanation": "kVp has the greatest effect on scatter production. As kVp increases, x-ray photons have higher energy and are more likely to undergo Compton interactions, which produce scatter. Higher kVp also increases the proportion of Compton to photoelectric interactions."
+  },
+  {
+    "question": "According to the inverse square law, if the SID is changed from 40 inches to 72 inches, and the original technique was 20 mAs, what new mAs is required to maintain IR exposure?",
+    "options": [
+      "36 mAs",
+      "50 mAs",
+      "65 mAs",
+      "80 mAs"
+    ],
+    "correct": 2,
+    "explanation": "Using the inverse square law formula: mAs₂ = mAs₁ × (SID₂²/SID₁²). Therefore: 20 × (72²/40²) = 20 × (5184/1600) = 20 × 3.24 = 64.8 ≈ 65 mAs."
+  },
+  {
+    "question": "What is the minimum total filtration required for radiographic equipment operating above 70 kVp?",
+    "options": [
+      "1.5 mm Al equivalent",
+      "2.5 mm Al equivalent",
+      "3.5 mm Al equivalent",
+      "0.5 mm Al equivalent"
+    ],
+    "correct": 1,
+    "explanation": "For x-ray equipment operating above 70 kVp, the minimum total filtration is 2.5 mm aluminum equivalent. This includes both inherent filtration (in the tube) and added filtration to remove low-energy photons that contribute to patient dose without contributing to the image."
+  },
+  {
+    "question": "The 15% rule states that increasing kVp by 15% has what effect on image receptor exposure?",
+    "options": [
+      "No change in exposure",
+      "Doubles the exposure",
+      "Halves the exposure",
+      "Quadruples the exposure"
+    ],
+    "correct": 1,
+    "explanation": "The 15% rule states that a 15% increase in kVp will double the image receptor exposure. Conversely, a 15% decrease in kVp will halve the exposure. This allows technologists to adjust kVp and mAs while maintaining IR exposure, but it affects image contrast."
+  },
+  {
+    "question": "Which of the following anatomical conditions would be classified as an additive pathology?",
+    "options": [
+      "Pneumothorax",
+      "Emphysema",
+      "Pleural effusion",
+      "Bowel obstruction with gas"
+    ],
+    "correct": 2,
+    "explanation": "Pleural effusion is an additive pathology because fluid accumulates in the pleural space, increasing tissue density and x-ray attenuation. This requires an increase in exposure factors. Pneumothorax and emphysema are destructive pathologies (decreased density)."
+  },
+  {
+    "question": "What is the primary difference between remnant radiation and scatter radiation?",
+    "options": [
+      "Remnant radiation includes both transmitted primary and scatter; scatter is only secondary radiation",
+      "They are the same thing with different names",
+      "Remnant radiation is produced by the tube; scatter is produced by the patient",
+      "Scatter radiation has higher energy than remnant radiation"
+    ],
+    "correct": 0,
+    "explanation": "Remnant radiation is all radiation that exits the patient and reaches the image receptor, including both transmitted primary radiation (unmodified) and scatter radiation (secondary radiation from interactions). Scatter is a component of remnant radiation."
+  },
+  {
+    "question": "Which geometric factor has the GREATEST effect on recorded detail/spatial resolution?",
+    "options": [
+      "Increased SID",
+      "Decreased OID",
+      "Smaller focal spot size",
+      "Increased patient thickness"
+    ],
+    "correct": 2,
+    "explanation": "While all geometric factors affect detail, focal spot size has the greatest impact. A smaller focal spot produces less geometric unsharpness (penumbra) and provides better recorded detail. This is why small focal spots are used for extremity and detail radiography."
+  },
+  {
+    "question": "A Potter-Bucky diaphragm is a type of:",
+    "options": [
+      "Beam restrictor device",
+      "Reciprocating grid mechanism",
+      "Filtration system",
+      "Collimator assembly"
+    ],
+    "correct": 1,
+    "explanation": "A Potter-Bucky diaphragm is a reciprocating or oscillating grid mechanism housed below the radiographic table. It moves the grid during exposure to blur out grid lines, preventing them from appearing on the image while maintaining scatter cleanup."
+  },
+  {
+    "question": "What is the primary advantage of a cross-hatch grid compared to a linear grid?",
+    "options": [
+      "Lower patient dose",
+      "Can be used with tube angulation",
+      "Superior scatter cleanup",
+      "Less expensive to manufacture"
+    ],
+    "correct": 2,
+    "explanation": "Cross-hatch grids have lead strips running in two directions (perpendicular to each other), providing superior scatter cleanup compared to linear grids. However, they require higher exposure factors, cannot be used with tube angulation, and are more expensive."
+  },
+  {
+    "question": "Window level controls which characteristic of the digital radiographic image?",
+    "options": [
+      "Image contrast",
+      "Spatial resolution",
+      "Brightness",
+      "Noise level"
+    ],
+    "correct": 2,
+    "explanation": "Window level controls the brightness of the displayed image by setting the center of the range of gray values displayed. Window width controls contrast. These post-processing adjustments allow optimization of image appearance without re-exposing the patient."
+  },
+  {
+    "question": "In the Compton interaction, what determines the energy of the scattered photon?",
+    "options": [
+      "The atomic number of the tissue",
+      "The angle of deflection",
+      "The mAs used",
+      "The type of grid used"
+    ],
+    "correct": 1,
+    "explanation": "In Compton scatter, the energy of the scattered photon depends on the scattering angle. Greater deflection angles result in more energy loss. At 180° (backscatter), maximum energy is lost; at small angles, the photon retains most of its original energy."
+  },
+  {
+    "question": "Which tissue type will demonstrate the HIGHEST differential absorption (greatest subject contrast)?",
+    "options": [
+      "Bone to soft tissue",
+      "Soft tissue to fat",
+      "Muscle to liver",
+      "Fat to air"
+    ],
+    "correct": 0,
+    "explanation": "Bone to soft tissue shows the highest differential absorption due to the large difference in atomic number and density. Bone (calcium, Z=20) has much higher attenuation than soft tissue, creating excellent subject contrast. This is why skeletal structures are so well visualized."
+  },
+  {
+    "question": "The anode heel effect results in:",
+    "options": [
+      "Greater intensity at the anode side of the x-ray field",
+      "Greater intensity at the cathode side of the x-ray field",
+      "Uniform intensity across the entire field",
+      "Increased scatter production"
+    ],
+    "correct": 1,
+    "explanation": "The anode heel effect causes decreased x-ray intensity at the anode side of the beam due to increased absorption by the anode material. The cathode side receives greater intensity. Clinically, the cathode is positioned toward thicker anatomy to compensate for greater attenuation."
+  }
+]
