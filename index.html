@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomy and Physiology Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        #drop-zone {
+            border: 2px dashed #ccc;
+            border-radius: 4px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        #drop-zone.dragover {
+            background-color: #e1f5fe;
+            border-color: #2196f3;
+        }
+        
+        .feedback-mode {
+            margin: 20px 0;
+        }
+        
+        .error {
+            color: red;
+            margin: 10px 0;
+        }
+        
+        #prompt-container {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+        }
+        
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .correct {
+            background-color: #dff0d8;
+            border-color: #d6e9c6;
+        }
+        
+        .incorrect {
+            background-color: #f2dede;
+            border-color: #ebccd1;
+        }
+        
+        .explanation {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Anatomy and Physiology Quiz</h1>
+    
+    <div id="file-selector">
+        <p>Select a question file:</p>
+        <input type="file" id="file-input" accept=".json">
+    </div>
+    
+    <div id="drop-zone">
+        Or drag and drop a JSON file here
+    </div>
+    
+    <div id="error-message"></div>
+    
+    <div class="feedback-mode">
+        <label>Choose Feedback Mode:</label>
+        <select id="feedback-mode">
+            <option value="end">End of Quiz Feedback</option>
+            <option value="immediate">Immediate Feedback</option>
+        </select>
+    </div>
+    
+    <div id="quiz-container"></div>
+    
+    <button id="submit-quiz" style="display: none;">Submit Quiz</button>
+    
+    <div id="quiz-results"></div>
+    
+    <button id="download-results" style="display: none;">Download Performance Results</button>
+    
+    <div id="prompt-container">
+        <h2>Generate New Question Set</h2>
+        <p>Use the following prompt to generate a new set of 20 questions in JSON format:</p>
+        <pre>
+Please create a set of 20 multiple-choice questions for an test relevant to above material.
+
+For each question, please provide:
+1. The question text
+2. Four answer options
+3. The index of the correct answer (0-3)
+4. A brief explanation of the correct answer
+
+Format the output as a JSON array, where each question is an object with the following structure:
+
+{
+  "question": "The question text goes here",
+  "options": ["Option A", "Option B", "Option C", "Option D"],
+  "correct": 0,
+  "explanation": "Explanation of the correct answer goes here"
+}
+
+Please ensure that the questions vary in difficulty and cover a range of subtopics within the subject. The JSON output should be properly formatted and ready to be used in a web-based quiz application.</pre>
+        <p>Paste into a text editor and save the output as a .json file.</p>
+    </div>
+
+    <script>
+        let quizData = [];
+        let userAnswers = [];
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        const quizContainer = document.getElementById('quiz-container');
+        const submitButton = document.getElementById('submit-quiz');
+        const resultsDiv = document.getElementById('quiz-results');
+        const downloadButton = document.getElementById('download-results');
+        const feedbackMode = document.getElementById('feedback-mode');
+        const errorMessage = document.getElementById('error-message');
+
+        // File drag and drop handlers
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragover');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            const file = e.dataTransfer.files[0];
+            if (file) {
+                loadQuizFile(file);
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                loadQuizFile(file);
+            }
+        });
+
+        function loadQuizFile(file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    quizData = JSON.parse(e.target.result);
+                    userAnswers = new Array(quizData.length).fill(null);
+                    displayQuiz();
+                    submitButton.style.display = 'block';
+                    errorMessage.textContent = '';
+                } catch (error) {
+                    errorMessage.textContent = 'Error loading quiz file. Please ensure it is a valid JSON file.';
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function displayQuiz() {
+            quizContainer.innerHTML = '';
+            quizData.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question';
+                questionDiv.innerHTML = `
+                    <p><strong>Question ${index + 1}:</strong> ${q.question}</p>
+                    ${q.options.map((option, i) => `
+                        <div>
+                            <input type="radio" name="q${index}" value="${i}" id="q${index}o${i}">
+                            <label for="q${index}o${i}">${option}</label>
+                        </div>
+                    `).join('')}
+                    <div class="explanation" style="display: none;">
+                        ${q.explanation}
+                    </div>
+                `;
+                quizContainer.appendChild(questionDiv);
+
+                // Add event listeners for immediate feedback
+                const radioButtons = questionDiv.querySelectorAll('input[type="radio"]');
+                radioButtons.forEach(radio => {
+                    radio.addEventListener('change', () => {
+                        const selected = parseInt(radio.value);
+                        userAnswers[index] = selected;
+                        
+                        if (feedbackMode.value === 'immediate') {
+                            const correct = selected === q.correct;
+                            questionDiv.className = 'question ' + (correct ? 'correct' : 'incorrect');
+                            questionDiv.querySelector('.explanation').style.display = 'block';
+                        }
+                    });
+                });
+            });
+        }
+
+        submitButton.addEventListener('click', () => {
+            if (feedbackMode.value === 'end') {
+                showResults();
+            }
+            downloadButton.style.display = 'block';
+        });
+
+        function showResults() {
+            let score = 0;
+            quizData.forEach((q, index) => {
+                const questionDiv = document.querySelectorAll('.question')[index];
+                const userAnswer = userAnswers[index];
+                
+                if (userAnswer === q.correct) {
+                    score++;
+                    questionDiv.className = 'question correct';
+                } else {
+                    questionDiv.className = 'question incorrect';
+                }
+                questionDiv.querySelector('.explanation').style.display = 'block';
+            });
+
+            resultsDiv.innerHTML = `
+                <h2>Quiz Results</h2>
+                <p>Score: ${score} out of ${quizData.length} (${Math.round(score/quizData.length*100)}%)</p>
+            `;
+        }
+
+        downloadButton.addEventListener('click', () => {
+            const results = {
+                score: userAnswers.filter((answer, index) => answer === quizData[index].correct).length,
+                totalQuestions: quizData.length,
+                answers: userAnswers.map((answer, index) => ({
+                    question: quizData[index].question,
+                    userAnswer: answer !== null ? quizData[index].options[answer] : 'Not answered',
+                    correctAnswer: quizData[index].options[quizData[index].correct],
+                    isCorrect: answer === quizData[index].correct
+                }))
+            };
+
+            const blob = new Blob([JSON.stringify(results, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'quiz-results.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+    </script>
+</body>
+</html>
